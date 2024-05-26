@@ -1,5 +1,5 @@
 package helper
 
 func Foo() string {
-	return "Version 1.0"
+	return "Version v0.0.3"
 }
