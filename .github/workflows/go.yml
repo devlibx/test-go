@@ -45,6 +45,9 @@ jobs:
         version=$(git tag -l 'v0.*.*' | sort -V | tail -n 1)
         echo "Current version: $version"
         
+        a=$(git tag -l 'v0.*.*')
+        echo "Current version a: $a"
+        
         # Remove the leading 'v' and split the version string into components
         version_without_v=${version#v}
         IFS='.' read -ra VERSION_PARTS <<< "$version_without_v"
