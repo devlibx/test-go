@@ -53,3 +53,4 @@ jobs:
         WITH_V: true
         INITIAL_VERSION: 2.0.0
         DEFAULT_BUMP: patch
+
