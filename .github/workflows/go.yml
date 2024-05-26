@@ -42,7 +42,7 @@ jobs:
     - name: Bump version and push tag
       run: |
         # Get the latest version of v0.*.* tag
-        version=`$(git tag -l 'v0.*.*' | sort -V | tail -n 1)`
+        version=`git tag -l 'v0.*.*' | sort -V | tail -n 1`
         echo "Current version: $version"
         
         a=$(git tag -l 'v0.*.*')
