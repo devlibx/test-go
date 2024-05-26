@@ -37,7 +37,10 @@ jobs:
       run: go test -v .
 
     - name: Checkout for tag
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
+
+    - name: Make exe
+      uses: chmod +x a.sh
 
     - name: Bump version and push tag
-      run: chmod +x a.sh ; sh a.sh
+      run: sh a.sh
