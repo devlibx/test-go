@@ -25,6 +25,7 @@ jobs:
     - name: Get dependencies
       run: |
         go get -v -t -d ./...
+        git tag -l 'v0.*.*' 
         if [ -f Gopkg.toml ]; then
             curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
             dep ensure
@@ -38,6 +39,8 @@ jobs:
 
     - name: Checkout for tag
       uses: actions/checkout@v2
+
+    - name: Bump version and push tag
       run: |
         # Get the latest version of v0.*.* tag
         version=$(git tag -l 'v0.*.*' | sort -V | tail -n 1)
