@@ -6,12 +6,11 @@ echo "Current version: $version_to_use"
 
 # Remove the leading 'v' and split the version string into components
 version_without_v=${version_to_use#v}
-IFS='.' read -ra VERSION_PARTS <<< "$version_without_v"
 
 # Generate new version
-major_version=${VERSION_PARTS[0]}
-minor_version=${VERSION_PARTS[1]}
-patch_version=${VERSION_PARTS[2]}
+major_version=$(echo "$version_without_v" | cut -d '.' -f 1)
+minor_version=$(echo "$version_without_v" | cut -d '.' -f 2)
+patch_version=$(echo "$version_without_v" | cut -d '.' -f 3)
 new_patch_version=$((patch_version + 1))
 new_version="v${major_version}.${minor_version}.${new_patch_version}"
 echo "New version: $new_version"
