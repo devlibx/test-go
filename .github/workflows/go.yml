@@ -46,3 +46,10 @@ jobs:
         WITH_V: true
         INITIAL_VERSION: 0.0.1
         DEFAULT_BUMP: patch
+    - name: Bump version and push tag for V2
+      uses: anothrNick/github-tag-action@1.36.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        WITH_V: true
+        INITIAL_VERSION: 2.0.0
+        DEFAULT_BUMP: patch
