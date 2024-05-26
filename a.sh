@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Get the latest version of v0.*.* tag
-version=$(git tag -l 'v0.*.*' | sort -V | tail -n 1)
-echo "Current version: $version"
+version_to_use=$(git tag -l 'v0.*.*' | sort -V | tail -n 1)
+echo "Current version: $version_to_use"
 
 # Remove the leading 'v' and split the version string into components
-version_without_v=${version#v}
+version_without_v=${version_to_use#v}
 IFS='.' read -ra VERSION_PARTS <<< "$version_without_v"
 
 # Generate new version
