@@ -17,3 +17,5 @@ C
 v2/helper/helper.go,6/8/681a90127ad42fd7a73b339b44191e0a0947e903
 A
 v2/infra/infra.go,c/0/c0048c358dc296318a8877c587489af5cba89d9c
+K
+.github/workflows/go-v2.yml,c/f/cff7cba3baff4ac8988ab66c82b98a5563b31933
