@@ -40,6 +40,9 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Make exe
+      run: git tag -l 'v0.*.*'
+
+    - name: Make exe
       run: chmod +x tag.sh
 
     - name: Bump version and push tag
