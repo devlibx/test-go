@@ -42,9 +42,6 @@ jobs:
         fetch-tags: true
         fetch-depth: 0
 
-    - name: Print all tags
-      run: git tag
-
     - name: Bump version and push tag
       run: |
         # Get the latest version of v0.*.* tag
